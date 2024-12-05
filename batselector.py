@@ -1,7 +1,7 @@
 import os
 import csv
 import uvicorn
-import flask
+import Flask
 
 from flask import Flask, render_template
 
@@ -15,9 +15,12 @@ def home():
 def about():
     return "This is your daily bat selection website."
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=10000)
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000, debug=True)
+#    import uvicorn
+#    uvicorn.run(app, host="0.0.0.0", port=10000)
 #port = int(os.environ.get('PORT', '0.0.0.0:8080'))
 #with open('Dataset1.csv', newline='')as csvfile:
  # batreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
