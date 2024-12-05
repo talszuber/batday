@@ -10,11 +10,11 @@ def home():
 
 @app.route("/about")
 def about():
-    return "This is the about page."
+    return "This is your daily bat selection website."
 
 if __name__ == "__main__":
-    app.run(debug=True)
-
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=10000)
 #port = int(os.environ.get('PORT', '0.0.0.0:8080'))
 #with open('Dataset1.csv', newline='')as csvfile:
  # batreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
