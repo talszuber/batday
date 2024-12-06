@@ -1,6 +1,6 @@
 import os
 import csv
-
+import uvicorn
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -15,8 +15,6 @@ def about():
 
 
 if __name__ == '__main__':
-   import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=10000)
-)
 #with open('Dataset1.csv', newline='')as csvfile:
  # batreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
