@@ -5,12 +5,14 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/home", methods=["GET", "POST"])
 def home():
+    start_response('200 OK', [('Content-Type', 'text/plain')])
     return "Hello, World! Welcome to your Python web app."
 
 @app.route("/about")
 def about():
+    start_response('200 OK', [('Content-Type', 'text/plain')])
     return "This is your daily bat selection website."
 
 
