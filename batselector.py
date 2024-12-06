@@ -5,7 +5,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
+@oidc.accept_token(True)
 def home():
     return "Hello, World! Welcome to your Python web app."
 
